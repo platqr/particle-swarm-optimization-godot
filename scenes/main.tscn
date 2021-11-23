@@ -93,7 +93,7 @@ margin_bottom = 279.201
 custom_fonts/font = ExtResource( 4 )
 text = "FUNCTION"
 clip_text = true
-items = [ "FUNCTION", null, false, 0, null, "THREE-HUMP CAMEL FUNCTION", null, false, 1, null, "Function 2", null, false, 2, null, "Function 3", null, false, 3, null, "Function 4", null, false, 4, null, "Function 5", null, false, 5, null, "Function 6", null, false, 6, null, "Function 7", null, false, 7, null, "Function 8", null, false, 8, null, "Function 9", null, false, 9, null, "Function 10", null, false, 10, null ]
+items = [ "FUNCTION", null, false, 0, null, "THREE-HUMP CAMEL FUNCTION", null, false, 1, null, "BOHACHEVSKY FUNCTION", null, false, 2, null, "BOOTH FUNCTION", null, false, 3, null, "MATYAS FUNCTION", null, false, 4, null, "HIMMELBLAU'S FUNCTION", null, false, 5, null, "Function 6", null, false, 6, null, "Function 7", null, false, 7, null, "Function 8", null, false, 8, null, "Function 9", null, false, 9, null, "Function 10", null, false, 10, null ]
 selected = 0
 __meta__ = {
 "_edit_lock_": true,

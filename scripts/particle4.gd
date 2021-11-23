@@ -22,7 +22,7 @@ func _ready():
 	fitness = objective_function(convertToDat(position))
 	bestFit = fitness
 	bestPos = convertToDat(position)
-
+	
 func move(glB):
 	velocity = (w*velocity) + (c1*(bestPos-convertToDat(position))) + (c2*(glB-convertToDat(position)))
 	position = position + velocity
@@ -44,8 +44,8 @@ func move(glB):
 func objective_function(o):
 	var x = o.x
 	var y = o.y
-	#THREE-HUMP CAMEL FUNCTION
-	var z = (pow(x,2)) - (1.05*pow(x,4)) + (pow(x,6)/6) + (x*y) + (pow(y,2))
+	#BOOTH FUNCTION
+	var z = (pow((x + (2*y) - 7),2)) + (pow(((2*x) + y - 5),2))
 	return z
 
 func convertToDat(vec):

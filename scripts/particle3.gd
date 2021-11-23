@@ -9,7 +9,7 @@ var fitness
 var bestFit
 var bestPos
 
-var globalBestFitLoc  = 999999# aqui cambiar dependiando de si va a max a min (que no se olvide cambiarlo en todos los particles)
+var globalBestFitLoc
 
 export var w = 1
 export var d = 0.98
@@ -23,7 +23,6 @@ func _ready():
 	bestFit = fitness
 	bestPos = convertToDat(position)
 	
-
 func move(glB):
 	velocity = (w*velocity) + (c1*(bestPos-convertToDat(position))) + (c2*(glB-convertToDat(position)))
 	position = position + velocity
@@ -45,12 +44,10 @@ func move(glB):
 func objective_function(o):
 	var x = o.x
 	var y = o.y
-	var z = pow((pow(x,2)+y-11),2) + pow((x + pow(y,2) - 7),2)
+	#BOHACHEVSKY FUNCTION
+	var z = (pow(x,2)) + (2*pow(y,2)) - (0.3*cos((3*PI*x)+(4*PI*y))) + 0.3
 	return z
 
 func convertToDat(vec):
 	var newVec = Vector2(((vec.x - 405) * 20 / 666),((vec.y - 405) * 20 / 666))
 	return newVec
-
-func setMinMaxTo(r):
-	setMinMax = r

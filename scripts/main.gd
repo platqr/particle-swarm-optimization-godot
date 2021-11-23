@@ -1,7 +1,7 @@
 extends Node2D
 
 #particle scene preload
-var particle = preload("res://scenes/particles/particle3.tscn") #preload particle scene
+var particle = preload("res://scenes/particles/particle7.tscn") #preload particle scene
 var particleInstance = [] #particle array
 
 var pop = 50 #population
@@ -17,9 +17,11 @@ func _ready():
 		createNewParticle(n)
 	$Control/PopInput.text = str(pop)
 
-func createNewParticle(n):
+func createNewParticle(n):#in ready & setNewPop
 	particleInstance.push_back(particle.instance())
 	add_child(particleInstance[n])
+	particleInstance[n].setMinMax = $Control/minManCh.get_selected_id()
+	particleInstance[n].globalBestFitLoc = globalBestFit
 
 func getGlobalBest():#called on timer
 	for n in particleInstance.size():
@@ -40,6 +42,14 @@ func setNewPop():#in set button
 	for n in pop:
 		createNewParticle(n)
 
+func setNewGlBest():#in set button
+	if($Control/minManCh.get_selected_id() == 0):
+		globalBestFit = -999999
+		minMax = 0
+	elif($Control/minManCh.get_selected_id() == 1):
+		globalBestFit = 999999
+		minMax = 1
+
 func _on_Timer_timeout():
 	getGlobalBest()
 	get_tree().call_group("particles", "move", globalBestPos)
@@ -57,15 +67,8 @@ func _on_Start_button_down():
 
 func _on_Set_button_down():
 	$Timer.stop()
-	setNewPop()
 	isRunning = false
+	setNewGlBest()
+	setNewPop()
 	$Control/Start.text = "Start"
 	$Control/FitLabel.text = "Best Fitness: 000.000"
-	
-	get_tree().call_group("particles", "setMinMaxTo", $Control/minManCh.get_selected_id())
-	if($Control/minManCh.get_selected_id() == 0):
-		globalBestFit = -999999
-		minMax = 0
-	elif($Control/minManCh.get_selected_id() == 1):
-		globalBestFit = 999999
-		minMax = 1

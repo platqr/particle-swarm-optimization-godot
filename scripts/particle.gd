@@ -9,7 +9,7 @@ var fitness
 var bestFit
 var bestPos
 
-var globalBestFitLoc  = 0
+var globalBestFitLoc
 
 export var w = 1
 export var d = 0.98
@@ -44,12 +44,10 @@ func move(glB):
 func objective_function(o):
 	var x = o.x
 	var y = o.y
+	#FUNCTION
 	var z = 3 * pow((1-x),2) * pow(EXP,(-pow(x,2) - pow((y+1),2))) - 10 * (x/5 - pow(x,3) - pow(y,5)) * pow(EXP,(-pow(x,2) - pow(y,2))) - 1/3 * pow(EXP,(-(pow((x+1),2)) - pow(y,2)))
 	return z
 
 func convertToDat(vec):
 	var newVec = Vector2(((vec.x - 405) * 20 / 666),((vec.y - 405) * 20 / 666))
 	return newVec
-
-func setMinMaxTo(r):
-	setMinMax = r
