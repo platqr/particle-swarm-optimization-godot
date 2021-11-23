@@ -1,0 +1,143 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/main.gd" type="Script" id=1]
+[ext_resource path="res://images/playground.png" type="Texture" id=3]
+[ext_resource path="res://fonts/fontfont.tres" type="DynamicFont" id=4]
+
+[node name="main" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="playground" type="Sprite" parent="."]
+self_modulate = Color( 0.45098, 0.521569, 0.988235, 1 )
+position = Vector2( 405, 405 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="Control"]
+margin_left = 1007.44
+margin_top = 465.626
+margin_right = 1161.44
+margin_bottom = 528.626
+custom_fonts/font = ExtResource( 4 )
+text = "Start"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="FitLabel" type="Label" parent="Control"]
+margin_left = 322.452
+margin_top = 32.8315
+margin_right = 472.452
+margin_bottom = 47.8315
+custom_fonts/font = ExtResource( 4 )
+text = "Best Fitness: 000.000"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="t1" type="Label" parent="Control"]
+margin_left = 1007.44
+margin_top = 169.967
+margin_right = 1118.44
+margin_bottom = 189.967
+custom_fonts/font = ExtResource( 4 )
+text = "Set population"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PopInput" type="TextEdit" parent="Control"]
+margin_left = 1007.44
+margin_top = 193.651
+margin_right = 1161.44
+margin_bottom = 219.651
+custom_fonts/font = ExtResource( 4 )
+text = "0"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="t2" type="Label" parent="Control"]
+margin_left = 1007.44
+margin_top = 233.201
+margin_right = 1118.44
+margin_bottom = 253.201
+custom_fonts/font = ExtResource( 4 )
+text = "Set function"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="funcChoose" type="OptionButton" parent="Control"]
+margin_left = 1007.44
+margin_top = 253.201
+margin_right = 1161.44
+margin_bottom = 279.201
+custom_fonts/font = ExtResource( 4 )
+text = "FUNCTION"
+clip_text = true
+items = [ "FUNCTION", null, false, 0, null, "THREE-HUMP CAMEL FUNCTION", null, false, 1, null, "Function 2", null, false, 2, null, "Function 3", null, false, 3, null, "Function 4", null, false, 4, null, "Function 5", null, false, 5, null, "Function 6", null, false, 6, null, "Function 7", null, false, 7, null, "Function 8", null, false, 8, null, "Function 9", null, false, 9, null, "Function 10", null, false, 10, null ]
+selected = 0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="t3" type="Label" parent="Control"]
+margin_left = 1007.44
+margin_top = 293.201
+margin_right = 1118.44
+margin_bottom = 313.201
+custom_fonts/font = ExtResource( 4 )
+text = "Find the"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="minManCh" type="OptionButton" parent="Control"]
+margin_left = 1007.44
+margin_top = 313.201
+margin_right = 1161.44
+margin_bottom = 339.201
+custom_fonts/font = ExtResource( 4 )
+text = "Maximum"
+items = [ "Maximum", null, false, 0, null, "Minimum", null, false, 1, null ]
+selected = 0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Set" type="Button" parent="Control"]
+margin_left = 1007.44
+margin_top = 355.858
+margin_right = 1161.44
+margin_bottom = 381.858
+custom_fonts/font = ExtResource( 4 )
+text = "Set"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="button_down" from="Control/Start" to="." method="_on_Start_button_down"]
+[connection signal="button_down" from="Control/Set" to="." method="_on_Set_button_down"]
