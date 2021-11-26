@@ -44,8 +44,8 @@ func move(glB):
 func objective_function(o):
 	var x = o.x
 	var y = o.y
-	#not set FUNCTION
-	var z = (pow(x,2)) + (2*pow(y,2)) - (0.3*cos((3*PI*x)+(4*PI*y))) + 0.3
+	#SIX-HUMP CAMEL FUNCTION
+	var z = (4-(2.1*x*x)+(pow(x,4)/3))*x*x + x*y + (-4+(4*y*y))*y*y
 	return z
 
 func convertToDat(vec):

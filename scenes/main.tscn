@@ -28,7 +28,7 @@ __meta__ = {
 [node name="Start" type="Button" parent="Control"]
 margin_left = 1007.44
 margin_top = 465.626
-margin_right = 1161.44
+margin_right = 1157.44
 margin_bottom = 528.626
 custom_fonts/font = ExtResource( 4 )
 text = "Start"
@@ -63,9 +63,9 @@ __meta__ = {
 
 [node name="PopInput" type="TextEdit" parent="Control"]
 margin_left = 1007.44
-margin_top = 193.651
-margin_right = 1161.44
-margin_bottom = 219.651
+margin_top = 189.967
+margin_right = 1157.44
+margin_bottom = 215.967
 custom_fonts/font = ExtResource( 4 )
 text = "0"
 __meta__ = {
@@ -88,12 +88,12 @@ __meta__ = {
 [node name="funcChoose" type="OptionButton" parent="Control"]
 margin_left = 1007.44
 margin_top = 253.201
-margin_right = 1161.44
+margin_right = 1157.44
 margin_bottom = 279.201
 custom_fonts/font = ExtResource( 4 )
-text = "FUNCTION"
+text = "1. FUNCTION"
 clip_text = true
-items = [ "FUNCTION", null, false, 0, null, "THREE-HUMP CAMEL FUNCTION", null, false, 1, null, "BOHACHEVSKY FUNCTION", null, false, 2, null, "BOOTH FUNCTION", null, false, 3, null, "MATYAS FUNCTION", null, false, 4, null, "HIMMELBLAU'S FUNCTION", null, false, 5, null, "Function 6", null, false, 6, null, "Function 7", null, false, 7, null, "Function 8", null, false, 8, null, "Function 9", null, false, 9, null, "Function 10", null, false, 10, null ]
+items = [ "1. FUNCTION", null, false, 0, null, "2. THREE-HUMP CAMEL FUNCTION", null, false, 1, null, "3. BOHACHEVSKY FUNCTION", null, false, 2, null, "4. BOOTH FUNCTION", null, false, 3, null, "5. MATYAS FUNCTION", null, false, 4, null, "6. HIMMELBLAU'S FUNCTION", null, false, 5, null, "7. DROP-WAVE FUNCTION", null, false, 6, null, "8. SIX-HUMP CAMEL FUNCTION", null, false, 7, null, "9. BUKIN FUNCTION N. 6 FUNCTION", null, false, 8, null, "10. GRAMACY & LEE (2012) FUNCTION", null, false, 9, null ]
 selected = 0
 __meta__ = {
 "_edit_lock_": true,
@@ -115,7 +115,7 @@ __meta__ = {
 [node name="minManCh" type="OptionButton" parent="Control"]
 margin_left = 1007.44
 margin_top = 313.201
-margin_right = 1161.44
+margin_right = 1157.44
 margin_bottom = 339.201
 custom_fonts/font = ExtResource( 4 )
 text = "Maximum"
@@ -128,9 +128,9 @@ __meta__ = {
 
 [node name="Set" type="Button" parent="Control"]
 margin_left = 1007.44
-margin_top = 355.858
-margin_right = 1161.44
-margin_bottom = 381.858
+margin_top = 359.542
+margin_right = 1157.44
+margin_bottom = 385.542
 custom_fonts/font = ExtResource( 4 )
 text = "Set"
 __meta__ = {

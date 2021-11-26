@@ -44,8 +44,8 @@ func move(glB):
 func objective_function(o):
 	var x = o.x
 	var y = o.y
-	#not set FUNCTION
-	var z = (pow(x,2)) + (2*pow(y,2)) - (0.3*cos((3*PI*x)+(4*PI*y))) + 0.3
+	#BUKIN FUNCTION N. 6 FUNCTION
+	var z = 100*sqrt(abs(y-(0.01*x*x))) + 0.01*abs(x+10)
 	return z
 
 func convertToDat(vec):

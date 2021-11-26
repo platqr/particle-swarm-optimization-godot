@@ -45,7 +45,7 @@ func objective_function(o):
 	var x = o.x
 	var y = o.y
 	#not set FUNCTION
-	var z = (pow(x,2)) + (2*pow(y,2)) - (0.3*cos((3*PI*x)+(4*PI*y))) + 0.3
+	var z = (sin(10*PI*x)/2*x) + pow((x-1),4)
 	return z
 
 func convertToDat(vec):

@@ -44,8 +44,8 @@ func move(glB):
 func objective_function(o):
 	var x = o.x
 	var y = o.y
-	#not set 
-	var z = sin(x+y)
+	#DROP-WAVE FUNCTION
+	var z = -((1+cos(12*sqrt((x*x)+(y*y))))/(0.5*((x*x)+(y*y))+2))
 	return z
 
 func convertToDat(vec):
